@@ -1,22 +1,18 @@
 #!/usr/bin/python3
-""" Module defining the Review class for representing reviews in the
-Airbnb application.
-"""
+"""Defines the Review class."""
 from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """ Review class for representing reviews in the Airbnb application.
+    """Represent a review.
 
-    Public class attributes:
-        place_id (str): Empty string by default, representing the ID of
-                        the Place associated with the review.
-
-        user_id (str): Empty string by default, representing the ID of the User
-                        associated with the review.
-
-        text (str): Empty string by default, representing the review text.
+    Attributes:
+        place_id (str): The Place id.
+        user_id (str): The User id.
+        text (str): The text of the review.
     """
+
     place_id = ""
     user_id = ""
     text = ""
+

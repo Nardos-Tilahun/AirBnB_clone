@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-""" Module defining the City class for representing cities in the
-Airbnb application.
-"""
+"""Defines the City class."""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """City class for representing cities in the Airbnb application.
+    """Represent a city.
 
-    Public class attributes:
-        state_id (str): Empty string by default, representing the ID of
-                        the State associated with the city.
-        name (str): Empty string by default, representing the city's name.
+    Attributes:
+        state_id (str): The state id.
+        name (str): The name of the city.
     """
+
     state_id = ""
     name = ""
+

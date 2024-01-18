@@ -1,14 +1,14 @@
-#!/usr/python3
-""" Module defining the State class for representing states in
-the Airbnb application.
-"""
+#!/usr/bin/python3
+"""Defines the State class."""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """ State class for representing states in the Airbnb application.
+    """Represent a state.
 
-    Public class attributes:
-        name (str): Empty string by default, representing the state's name.
+    Attributes:
+        name (str): The name of the state.
     """
+
     name = ""
+
