@@ -1,46 +1,28 @@
 #!/usr/bin/python3
 """
-Module that contains class for storage and persistence between
-sessions which is vital for an application such as this
-"""
+Module that contains class for storage and persistence between """
 import json
 import os
 
 
 class FileStorage:
     """
-    FileStorage class contains methods and private class attributes
-    that handle persistency and storage between sessions. There are
-    methods for adding new json objects to a file, saving and
-    retrieving
-    """
+    FileStorage class contains methods and private class attributes """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """
-        This simply returns all objects that have been saved in the
-        form of a dictionary. This is useful for passing between
-        sessions
-        """
+        """ returns all objects that have been saved in the """
         return FileStorage.__objects
 
     def new(self, obj):
         """
-        Create a new dictionary that will most likely be added to the
-        __objects dictionary as a whole.
-        Args:
-            obj: the new obj to add which will be converted to a
-                dictionary
-        """
+        Create a new dictionary that will most likely be added to the """
         key_name = "{}.{}".format(type(obj).__name__, obj.id)
         FileStorage.__objects[key_name] = obj
 
     def save(self):
-        """
-        Write the new object to the file that stores all the dictionary
-        entries as a way to save items and persistency
-        """
+        """ new object to the file that stores all the dictionary """
         my_dict = {}
         with open(FileStorage.__file_path, "w", encoding="utf8") as file:
             for key, value in FileStorage.__objects.items():
@@ -48,10 +30,7 @@ class FileStorage:
             json.dump(my_dict, file)
 
     def class_map(self):
-        """
-        Returns a dictionary that contains a map of class names and
-        their respective classes
-        """
+        """ Returns a dictionary """
         from models.user import User
         from models.city import City
         from models.place import Place
@@ -73,11 +52,7 @@ class FileStorage:
 
     def reload(self):
         """
-        This method reads from a file all serialised objects, converts
-        them from json format to a dictionary and assigns the __objects
-        attribute to them
-
-        If the file doesn't exist, no errors or exceptions are raised
+        reads from a file all serialised objects.
         """
         try:
             with open(FileStorage.__file_path, "r", encoding="utf-8") as file:

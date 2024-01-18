@@ -10,8 +10,7 @@ from datetime import datetime
 
 
 class BaseModel:
-    """ Defines a class Basemodel
-    """
+    """ Defines a class Basemodel """
     def __init__(self, *args, **kwargs):
         """ Initialises all public object attribute """
 
@@ -30,18 +29,13 @@ class BaseModel:
             models.storage.new(self)
 
     def save(self):
-        """
-        This method updates the 'updated_at' attribute to the
-        current datetime or the current time and date
-        """
+        """ updated_at' attribute to the current datetime """
+        
         self.updated_at = datetime.now()  # when it was last updated
         models.storage.save()
 
     def to_dict(self):
-        """
-        This method returns a dictionary representation of the
-        class for use in serialization to json objects
-        """
+        """ returns a dictionary representation """
         my_dict = {}
         my_dict["__class__"] = self.__class__.__name__
         # iterate, extract & convert datetime values to a str in ISO format
@@ -53,10 +47,7 @@ class BaseModel:
         return dict(my_dict)
 
     def __str__(self):
-        """
-        This returns a string representation of the class and its
-        attributes. Helpful for debugging and such
-        """
+        """Helpful for debugging and such """
         return "[{}] ({}) {}".format(
             type(self).__name__, self.id, self.__dict__
             )
