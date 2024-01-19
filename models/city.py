@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-""" Defines the City class. """
+"""Describe the City modules."""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """ Represent a city. """
+    """class for a city.
+
+    """
 
     state_id = ""
     name = ""
+

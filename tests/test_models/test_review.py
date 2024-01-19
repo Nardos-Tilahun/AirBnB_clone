@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-"""Defines unittests for models/review.py.
-
-Unittest classes:
-    TestReview_instantiation
-    TestReview_save
-    TestReview_to_dict
-"""
+"""Describe for models/review.py module"""
 import os
 import models
 import unittest
@@ -97,7 +91,7 @@ class TestReview_instantiation(unittest.TestCase):
 
 
 class TestReview_save(unittest.TestCase):
-    """Unittests for testing save method of the Review class."""
+    """ae method of the Review class."""
 
     @classmethod
     def setUp(self):
@@ -148,7 +142,7 @@ class TestReview_save(unittest.TestCase):
 
 
 class TestReview_to_dict(unittest.TestCase):
-    """Unittests for testing to_dict method of the Review class."""
+    """esting to_dict method of the Review class."""
 
     def test_to_dict_type(self):
         self.assertTrue(dict, type(Review().to_dict()))
