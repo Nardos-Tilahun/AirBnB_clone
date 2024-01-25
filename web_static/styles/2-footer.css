@@ -6,4 +6,5 @@ footer {
     line-height: 100%;
     position: fixed;
     bottom: 0;
+    top: unset;
 }
