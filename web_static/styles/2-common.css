@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 body {
     min-height: 100%;
+=======
+*, *::after, *::before {
+	margin: 0px;
+	padding: 0px;
+>>>>>>> a6ff9cb8f6e5ff1cbf026ac12203d93b927012d1
 }

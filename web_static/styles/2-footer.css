@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 footer div {
     background-color: #00ff00;
     height: 60px;
@@ -6,4 +7,14 @@ footer div {
     position: fixed;
     bottom: 0;
     line-height: 60px;
+=======
+footer {
+	height: 60px;
+	position: fixed;
+	display: grid;
+	place-content: center;
+	background-color: green;
+	inset: 0px;
+	top: unset;
+>>>>>>> a6ff9cb8f6e5ff1cbf026ac12203d93b927012d1
 }
